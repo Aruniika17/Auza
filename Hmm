@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi AI Sederhana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        #container {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #response {
+            margin-top: 20px;
+            background: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <h2>Aplikasi AI Sederhana</h2>
+    <textarea id="userInput" placeholder="Tulis pertanyaanmu di sini..."></textarea>
+    <button onclick="sendMessage()">Kirim</button>
+    
+    <div id="response"></div>
+</div>
+
+<script>
+    function sendMessage() {
+        const userInput = document.getElementById('userInput').value;
+        const responseDiv = document.getElementById('response');
+
+        // Simulasi respons AI
+        responseDiv.innerHTML = `<strong>AI:</strong> ${userInput} adalah pertanyaan yang menarik!`;
+        
+        // Kosongkan input setelah mengirim
+        document.getElementById('userInput').value = '';
+    }
+</script>
+
+</body>
+</html>
